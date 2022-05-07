@@ -1,32 +1,290 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <title>Moje książki</title>
-    </head>
-<body>
-    <nav>
-    <h1>Dobre książki</h1>
-    <form>
-        <input type="text" placeholder="Jak wytresować pingwina?">
-        <button type="button">Szukaj</button>
-    </form>
-    <a href="user.html">Mój Profil</a>
-    <a href="">Zaloguj</a>
+<html class="h-100">
+
+<head>
+    <title>Moje książki</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial_scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="style.css" rel="stylesheet">
+</head>
+
+<body class="bg-dark">
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark p-3">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Dobre książki</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <form class="d-flex me-auto mt-3 mt-md-0">
+                    <input class="form-control me-2" type="search" placeholder="Np. tytuł książki lub autor"
+                        aria-label="Szukaj">
+                    <button class="btn btn-outline-success" type="submit">Szukaj</button>
+                </form>
+                <a href="#" class="nav-link">Mój profil</a>
+                <a href="form.html" class="nav-link">Zaloguj</a>
+            </div>
+        </div>
     </nav>
     <main>
-    <img src="https://a.allegroimg.com/original/12e35e/6dfdd3bf4767a17f47e42ede879a">
-    <h1>IMIĘ NAZWISKO</h1>
-    <p>Konto aktywne od 02.10.2021r.</p>
-    <ul>
-        <li>Recenzje</li>
-        <li>Polecone</li>
-        <li>Ulubione</li>
-        <li>Czarna lista</li>
-    </ul>
+        <section class="bg-dark text-light">
+            <div class="container">
+                <div class="row d-flex justify-content-center text-center">
+                    <img class="profile-pic rounded-circle p-0 my-2"
+                        src="https://a.allegroimg.com/original/12e35e/6dfdd3bf4767a17f47e42ede879a">
+                    <h1>IMIĘ NAZWISKO</h1>
+                    <p>Konto aktywne od 02.10.2021r.</p>
+                </div>
+            </div>
+        </section>
+        <section>
+            <ul class="nav nav-tabs bg-dark text-light" id="myTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link px-2 py-1 px-sm-3 py-sm-2 active" id="recenenzje-tab" data-bs-toggle="tab"
+                        data-bs-target="#recenzje" type="button" role="tab" aria-controls="home"
+                        aria-selected="true">Recenzje</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link px-2 py-1 px-sm-3 py-sm-2" id="polecone-tab" data-bs-toggle="tab"
+                        data-bs-target="#polecone" type="button" role="tab" aria-controls="polecone"
+                        aria-selected="false">Polecone</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link px-2 py-1 px-sm-3 py-sm-2" id="ulubione-tab" data-bs-toggle="tab"
+                        data-bs-target="#ulubione" type="button" role="tab" aria-controls="ulubione"
+                        aria-selected="false">Ulubione</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link px-2 py-1 px-sm-3 py-sm-2" id="czarnalista-tab" data-bs-toggle="tab"
+                        data-bs-target="#czarnalista" type="button" role="tab" aria-controls="czarnalista"
+                        aria-selected="false">Czarna lista</button>
+                </li>
+            </ul>
+            <div class="tab-content" id="MyTabContent">
+                <div class="tab-pane fade show active" id="recenzje" role="tabpanel" aria-labelledby="home-tab">
+                    <div class="container p-4">
+                        <div class="row row-cols-auto justify-content-center g-4">
+                            <div class="col">
+                                <div class="card bg-dark text-light" style="width: 18rem;">
+                                    <img src="https://www.textrazor.com/img/letters_inverse.png" class="card-img-top"
+                                        alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Recenzja 1</h5>
+                                        <p class="card-text">Some quick example text to build on the card title and make
+                                            up
+                                            the
+                                            bulk
+                                            of the card's content.</p>
+                                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card bg-dark text-light" style="width: 18rem;">
+                                    <img src="https://www.textrazor.com/img/letters_inverse.png" class="card-img-top"
+                                        alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Recenzja 2</h5>
+                                        <p class="card-text">Some quick example text to build on the card title and make
+                                            up
+                                            the
+                                            bulk
+                                            of the card's content.</p>
+                                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card bg-dark text-light" style="width: 18rem;">
+                                    <img src="https://www.textrazor.com/img/letters_inverse.png" class="card-img-top"
+                                        alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Recenzja 3</h5>
+                                        <p class="card-text">Some quick example text to build on the card title and make
+                                            up
+                                            the
+                                            bulk
+                                            of the card's content.</p>
+                                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="polecone" role="tabpanel" aria-labelledby="polecone-tab">
+                    <div class="container p-4">
+                        <div class="row row-cols-auto justify-content-center g-4">
+                            <div class="col">
+                                <div class="card bg-dark text-light" style="width: 18rem;">
+                                    <img src="https://m.media-amazon.com/images/I/51SiCx-onBL._AC_SY1000_.jpg"
+                                        class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Polecone 1</h5>
+                                        <p class="card-text">Some quick example text to build on the card title and make
+                                            up
+                                            the
+                                            bulk
+                                            of the card's content.</p>
+                                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card bg-dark text-light" style="width: 18rem;">
+                                    <img src="https://m.media-amazon.com/images/I/51SiCx-onBL._AC_SY1000_.jpg"
+                                        class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Polecone 2</h5>
+                                        <p class="card-text">Some quick example text to build on the card title and make
+                                            up
+                                            the
+                                            bulk
+                                            of the card's content.</p>
+                                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card bg-dark text-light" style="width: 18rem;">
+                                    <img src="https://m.media-amazon.com/images/I/51SiCx-onBL._AC_SY1000_.jpg"
+                                        class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Polecone 3</h5>
+                                        <p class="card-text">Some quick example text to build on the card title and make
+                                            up
+                                            the
+                                            bulk
+                                            of the card's content.</p>
+                                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                    <div class="tab-pane fade" id="ulubione" role="tabpanel" aria-labelledby="ulubione-tab">
+                        <div class="container p-4">
+                            <div class="row row-cols-auto justify-content-center g-4">
+                                <div class="col">
+                                    <div class="card bg-dark text-light" style="width: 18rem;">
+                                        <img src="https://www.textrazor.com/img/letters_inverse.png"
+                                            class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Ulubione 1</h5>
+                                            <p class="card-text">Some quick example text to build on the card title and
+                                                make
+                                                up
+                                                the
+                                                bulk
+                                                of the card's content.</p>
+                                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card bg-dark text-light" style="width: 18rem;">
+                                        <img src="https://www.textrazor.com/img/letters_inverse.png"
+                                            class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Ulubione 2</h5>
+                                            <p class="card-text">Some quick example text to build on the card title and
+                                                make
+                                                up
+                                                the
+                                                bulk
+                                                of the card's content.</p>
+                                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card bg-dark text-light" style="width: 18rem;">
+                                        <img src="https://www.textrazor.com/img/letters_inverse.png"
+                                            class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Ulubione 3</h5>
+                                            <p class="card-text">Some quick example text to build on the card title and
+                                                make
+                                                up
+                                                the
+                                                bulk
+                                                of the card's content.</p>
+                                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                        <div class="tab-pane fade" id="czarnalista" role="tabpanel" aria-labelledby="czarnalista-tab">
+                            <div class="container p-4">
+                                <div class="row row-cols-auto justify-content-center g-4">
+                                    <div class="col">
+                                        <div class="card bg-dark text-light" style="width: 18rem;">
+                                            <img src="https://www.textrazor.com/img/letters_inverse.png"
+                                                class="card-img-top" alt="...">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Black list 1</h5>
+                                                <p class="card-text">Some quick example text to build on the card title
+                                                    and make
+                                                    up
+                                                    the
+                                                    bulk
+                                                    of the card's content.</p>
+                                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="card bg-dark text-light" style="width: 18rem;">
+                                            <img src="https://www.textrazor.com/img/letters_inverse.png"
+                                                class="card-img-top" alt="...">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Black list 2</h5>
+                                                <p class="card-text">Some quick example text to build on the card title
+                                                    and make
+                                                    up
+                                                    the
+                                                    bulk
+                                                    of the card's content.</p>
+                                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="card bg-dark text-light" style="width: 18rem;">
+                                            <img src="https://www.textrazor.com/img/letters_inverse.png"
+                                                class="card-img-top" alt="...">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Black list 3</h5>
+                                                <p class="card-text">Some quick example text to build on the card title
+                                                    and make
+                                                    up
+                                                    the
+                                                    bulk
+                                                    of the card's content.</p>
+                                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+        </section>
     </main>
-    <footer>
-    All rights reserved &#169; 2022
+    <footer class="footer fixed-bottom bg-dark text-center text-light p-2">
+        <div class="container">
+            <span class="text-muted">All rights reserved &#169; 2022</span>
+        </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
 </body>
+
 </html>
